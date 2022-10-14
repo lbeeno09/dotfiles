@@ -1,9 +1,19 @@
-/.config/
+/*
+/.**
 
 !/.config/nvim/
+!/.config/nvim/after/**
+!/.config/nvim/ftplugin/**
+!/.config/nvim/lua/**
+!/.config/nvim/plugin/**
 /.config/nvim/undo/
+!/.config/nvim/init.lua
 
-/.config/powershell/Modules/
-/.config/powershell/Scripts/
-/.config/powershell/powershell.config.json
-/.config/powershell/profile.ps1
+!/.config/powershell/
+
+!/.zsh/
+!/.zshrc
+
+!/.gitignore
+!/LICENSE
+!/README.md
