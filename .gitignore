@@ -5,3 +5,5 @@
 
 /.config/powershell/Modules/
 /.config/powershell/Scripts/
+/.config/powershell/powershell.config.json
+/.config/powershell/profile.ps1

@@ -3,7 +3,7 @@
 
 # Terminal
 Import-Module posh-git
-$omp_config = Join-Path $PSScriptRoot ".\omp.json"
+$omp_config = Join-Path $PSScriptRoot "./omp.json"
 oh-my-posh init pwsh --config $omp_config | Invoke-Expression
 Import-Module -Name Terminal-Icons
 
@@ -40,9 +40,3 @@ function SymLink {
     New-Item -Value $What -Path $Where -Name $Called -ItemType SymbolicLink
 }
 # <<< Custom Functions
-#region conda initialize
-
-# !! Contents within this block are managed by 'conda init' !!
-(& "D:\Users\hanbi\anaconda3\Scripts\conda.exe" "shell.powershell" "hook") | Out-String | Invoke-Expression
-#endregion
-
