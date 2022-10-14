@@ -8,6 +8,8 @@
 
 !/.config/powershell/
 !/.config/powershell/**
+/.config/powershell/Modules/
+/.config/powershell/Scripts/
 
 !/.zsh/
 !/.zsh/**
