@@ -6,10 +6,6 @@ vim.opt.fileencoding = "utf-8"
 
 vim.opt.backup = false
 vim.opt.showcmd = true
-if vim.fn.has("persistent_undo") then
-  vim.opt.undodir = vim.fn.expand("~") .. "\\AppData\\Local\\nvim\\undo"
-  vim.opt.undofile = true
-end
 
 vim.opt.ambiwidth = "single"
 vim.opt.autoindent = true

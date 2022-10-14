@@ -1,4 +1,4 @@
-require("bufferline").setup {
+require("bufferline").setup({
   options = {
     hover = {
       enabled = true,
@@ -7,7 +7,7 @@ require("bufferline").setup {
     },
     separator_style = "slant"
   }
-}
+})
 
 vim.api.nvim_set_keymap("n", "<Tab>", "<cmd>BufferLineCycleNext<cr>", {})
 vim.api.nvim_set_keymap("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", {})
