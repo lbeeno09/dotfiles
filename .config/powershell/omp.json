@@ -93,7 +93,7 @@
           "background": "#383838",
           "foreground": "p:blue",
           "properties": {
-            "display_mode": "context"
+            "display_mode": "files"
           },
           "style": "plain",
           "template": "<parentBackground,background>\ue0b0</> \ue235 {{ if .Venv }}({{ .Venv }}){{ end }} ",
