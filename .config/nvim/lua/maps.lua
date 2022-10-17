@@ -4,6 +4,9 @@ vim.g.mapleader = "<Space>"
 -- Select all
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
+-- Save
+vim.keymap.set("i", "<C-s>", "<C-[><cmd>w<cr>")
+
 -- move between wrapped lines
 vim.keymap.set("n", "j", "gj", { noremap=true })
 vim.keymap.set("n", "k", "gk", { noremap=true })
