@@ -17,4 +17,3 @@ require("nvim-tree").setup {
 }
 
 vim.keymap.set("n", "<C-t>", ":NvimTreeFocus<cr>")
-vim.keymap.set("n", "<C-w>", ":NvimTreeClose<cr>")

@@ -17,6 +17,8 @@ New-Alias -Name "Set-PoshContext" -Value "Set-PoshGitStatus" -Scope Global -Forc
 Set-PSReadLineOption -PredictionSource History
 
 # >>> Custom Variables
+Set-Variable HOME "D:$env:homepath" -Force
+(get-psprovider "FileSystem").Home = "D:$env:homepath"
 # <<< Custom Variables
 
 # >>> Custom Functions
