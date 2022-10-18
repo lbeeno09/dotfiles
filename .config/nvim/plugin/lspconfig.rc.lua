@@ -34,6 +34,13 @@ local lsp_flags = {
   debounce_text_changes = 150,
 }
 
+local wincmd
+if vim.fn.has("macunix") then
+  wincmd = ""
+else
+  wincmd = ".cmd"
+end
+
 -- C/C++
 require("lspconfig").clangd.setup {
   on_attach = on_attach,
@@ -74,7 +81,7 @@ require("lspconfig").pyright.setup {
   on_attach = on_attach,
   flags = lsp_flags,
 
-  cmd = { "pyright-langserver.cmd", "--stdio" }
+  cmd = { "pyright-langserver" .. wincmd, "--stdio" }
 }
 
 -- Typescript
@@ -82,6 +89,6 @@ require("lspconfig").tsserver.setup {
   on_attach = on_attach,
   flags = lsp_flags,
 
-  cmd = { "typescript-language-server.cmd", "--stdio" },
+  cmd = { "typescript-language-server" .. wincmd, "--stdio" },
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
 }

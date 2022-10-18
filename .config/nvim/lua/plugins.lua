@@ -2,7 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 require("packer").startup(function(use)
   -- Package manager
-  use({"wbthomason/packer.nvim", opt=true})
+  use("wbthomason/packer.nvim")
   -- Library
   use("nvim-lua/plenary.nvim") -- neovim functions
   use("kyazdani42/nvim-web-devicons") -- file icons
