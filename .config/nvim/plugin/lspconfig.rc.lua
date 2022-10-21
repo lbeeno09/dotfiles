@@ -37,7 +37,8 @@ local lsp_flags = {
 local wincmd
 if vim.fn.has("macunix") then
   wincmd = ""
-else
+end
+if vim.fn.has("win32") then
   wincmd = ".cmd"
 end
 
@@ -48,6 +49,15 @@ require("lspconfig").clangd.setup {
 
   cmd = { "clangd" },
   filetypes = { "c", "cpp", "cuda" }
+}
+
+-- Go
+require("lspconfig").gopls.setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+
+  cmd = { "gopls"},
+  filetypes = { "go", "gomod", "gowork", "gotmlp" }
 }
 
 -- Lua
