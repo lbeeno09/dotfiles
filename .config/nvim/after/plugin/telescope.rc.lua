@@ -26,6 +26,7 @@ telescope.setup {
       mappings = {
         ["n"] = {
           ["N"] = fb_actions.create,
+          ["X"] = fb_actions.remove,
           ["R"] = fb_actions.rename
         }
       }
