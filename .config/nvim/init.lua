@@ -2,9 +2,10 @@ require("base")
 require("plugins")
 require("maps")
 
-if vim.fn.has("macunix") then
-  require("macos")
-end
-if vim.fn.has("win32") then
+if not vim.fn.has("macunix") then
   require("windows")
 end
+if not vim.fn.has("win32") then
+  require("macos")
+end
+
