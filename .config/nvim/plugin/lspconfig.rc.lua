@@ -56,7 +56,7 @@ require("lspconfig").gopls.setup {
   on_attach = on_attach,
   flags = lsp_flags,
 
-  cmd = { "gopls"},
+  cmd = { "gopls" .. wincmd },
   filetypes = { "go", "gomod", "gowork", "gotmlp" }
 }
 
