@@ -35,7 +35,7 @@ local lsp_flags = {
 }
 
 local cmdext = ""
-if not vim.fn.has("macunix") then
+if ("Windows_NT" == vim.loop.os_uname().sysname) then
   cmdext = cmdext .. ".cmd"
 end
 
@@ -54,7 +54,7 @@ require("lspconfig").gopls.setup {
   flags = lsp_flags,
 
   cmd = { "gopls" .. cmdext },
-  filetypes = { "go", "gomod", "gowork", "gotmlp" }
+  filetypes = { "go", "gomod", "gowork", "gotmlp" },
 }
 
 -- Lua
@@ -98,4 +98,10 @@ require("lspconfig").tsserver.setup {
 
   cmd = { "typescript-language-server" .. cmdext, "--stdio" },
   filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
+}
+
+-- Vue
+require("lspconfig").vuels.setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
 }
