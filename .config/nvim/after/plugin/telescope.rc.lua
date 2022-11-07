@@ -25,6 +25,7 @@ telescope.setup {
       hijack_netrw = true,
       mappings = {
         ["n"] = {
+          ["C"] = fb_actions.copy,
           ["N"] = fb_actions.create,
           ["X"] = fb_actions.remove,
           ["R"] = fb_actions.rename

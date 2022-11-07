@@ -57,6 +57,7 @@ require("packer").startup(function(use)
   -- Other LSP's
   -- Flutter
   use("akinsho/flutter-tools.nvim")
+
   -- Markdown preview
   use({
     "iamcco/markdown-preview.nvim",

@@ -57,6 +57,25 @@ require("lspconfig").gopls.setup {
   filetypes = { "go", "gomod", "gowork", "gotmlp" },
 }
 
+-- HTML / CSS / JavaScript
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+require("lspconfig").html.setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
+}
+require("lspconfig").cssls.setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities
+}
+require("lspconfig").jsonls.setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities
+}
+
 -- Lua
 require("lspconfig").sumneko_lua.setup {
   on_attach = on_attach,
@@ -91,13 +110,21 @@ require("lspconfig").pyright.setup {
   cmd = { "pyright-langserver" .. cmdext, "--stdio" }
 }
 
+-- Rust
+require("lspconfig").rust_analyzer.setup {
+  on_attach = on_attach,
+  flags = lsp_flags,
+
+  cmd = { "rust-analyzer" .. cmdext }
+}
+
 -- Typescript
 require("lspconfig").tsserver.setup {
   on_attach = on_attach,
   flags = lsp_flags,
 
   cmd = { "typescript-language-server" .. cmdext, "--stdio" },
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
+  filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" }
 }
 
 -- Vue
