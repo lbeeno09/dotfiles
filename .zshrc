@@ -27,7 +27,10 @@ function mkcd() {
 # <<< zsh config
 
 # >>> PATH
+# flutter
 export PATH="$PATH:$HOME/src/flutter/bin"
+# openssl
+export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 # <<< PATH
 
 # >>> conda initialize >>>
