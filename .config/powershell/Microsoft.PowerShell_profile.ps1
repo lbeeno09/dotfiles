@@ -4,6 +4,7 @@ Set-Variable HOME "D:$env:homepath" -Force
 
 # Alias
 Set-Alias ll ls
+Set-Alias l ls
 
 # disable default prompt for anaconda
 $omp_config = Join-Path $PSScriptRoot "./omp.json"
